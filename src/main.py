@@ -83,7 +83,7 @@ def dump_election_results_raw_data(state_info):
     # for ac_id, ac_name in state_ac.items():
     # for ac_id, ac_name in {'102':''}.items():
 
-        # if int(ac_id) > 60:
+        # if int(ac_id) > 5:
         #     break
 
         # ac_name = state_ac[ac_id]
@@ -170,7 +170,8 @@ def dump_election_results_raw_data(state_info):
     # print(party_list)
 
     curr_dir = Path(__file__).parent.absolute()
-    csv_dir = curr_dir.joinpath('csv_logs')
+    curr_dir = curr_dir.parent
+    csv_dir = curr_dir.joinpath('data')
 
     if not csv_dir.exists():
         csv_dir.mkdir()
@@ -293,7 +294,7 @@ if __name__ == '__main__':
 
     state_info_list = []
 
-    state_info_dict = {'West Bengal' : state_info_dict['West Bengal']}
+    # state_info_dict = {'West Bengal' : state_info_dict['West Bengal']}
     # print(state_info_dict)
 
     for k, v in state_info_dict.items():
